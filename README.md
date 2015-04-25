@@ -3,7 +3,7 @@
 ### Average values from 'Human Activity Recognition Using Smartphones Dataset'
 
 This tool analysis provides a 'summary' data view of the 'Human Activity Recognition Using Smartphones Dataset'
-(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) [1]
+<http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones> [1]
 
 ### Dataset
 30 volunteers performed six different activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
@@ -14,7 +14,7 @@ For more details on the dataset and how it was built, please refer to CodeBook.m
 
 ### Rebuilding Dataset
 To rebuild data set (or do your own 'reshapes'), you should download and unzip 
-the dataset file http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip .
+the dataset file <http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip> .
 Please check that it is unzipped in directory 'UCI HAR Dataset'. (If you are out of space, 
 please note that sub-directories 'Inertial Signals' could be removed).
 You can then run the script run_analysis.R by sourcing it in R to rebuild the dataset from scratch.

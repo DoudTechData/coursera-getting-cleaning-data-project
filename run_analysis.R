@@ -2,18 +2,21 @@ library(dplyr)
 tidyData <- function(){
     #extracting feature names
     featuresNames <- read.table("UCI HAR Dataset//features.txt", stringsAsFactors = FALSE)$V2
-
+    #Removing "double" parenthesis, to avoid names with multiple dots.
+    featuresNames <- sub("()", featuresNames,fixed=TRUE, replacement="")
+    
     #reading observations
     test <- read.table("UCI HAR Dataset//test//X_test.txt", col.names=featuresNames)
     train <- read.table("UCI HAR Dataset//train//X_train.txt", col.names=featuresNames)
 
-    #remove variables with duplicate names (anyway we do not need them, it is bandsEnergy variables)
+    #remove variables with duplicate names (anyway we do not need them, they are bandsEnergy variables)
+    #as dplyr do not support data.frames with duplicated column names.
     test <- test[!duplicated(names(test))]
     train <- train[!duplicated(names(train))]
     
     #select only mean and standart deviation of signals over time but also mean frequency.
-    test <- select(test, contains("mean.."), contains("std.."), contains("meanFreq.."))
-    train <- select(train, contains("mean.."), contains("std.."), contains("meanFreq.."))
+    test <- select(test, contains(".mean."), contains(".std."), contains(".meanFreq."))
+    train <- select(train, contains(".mean."), contains("std."), contains(".meanFreq."))
     
     #adding subject and activity code
     test <- mutate(test, SubjectId = read.table("UCI HAR Dataset/test/subject_test.txt")$V1, ActivityCode = read.table("UCI HAR Dataset/test/y_test.txt")$V1)

@@ -19,6 +19,7 @@ Please check that it is unzipped in directory 'UCI HAR Dataset'. (If you are out
 please note that sub-directories 'Inertial Signals' could be removed).
 You can then run the script run_analysis.R by sourcing it in R to rebuild the dataset from scratch.
 For details on the different steps, please have a look to comments in the script file.
+Please also note that it uses the library 'dplyr' that should be installed in your R environment.
 
 
 This dataset and source code is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.

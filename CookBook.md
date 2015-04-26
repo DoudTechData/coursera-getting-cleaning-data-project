@@ -1,9 +1,5 @@
----
-title: "Cook Book"
-author: "Edouard Chevalier"
-date: "25/04/2015"
-output: html_document
----
+Cook Book
+---------
 
 The dataset is a single file named 'UCI HAR dataset Means Per Activity And Subject.txt'. 
 It is a table of 180 records of 59 variables that summarizes main data of the 'Human Activity Recognition Using Smartphones Dataset' <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>.
